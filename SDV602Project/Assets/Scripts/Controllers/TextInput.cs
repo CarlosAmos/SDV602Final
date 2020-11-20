@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Used for the textinput in the game
 public class TextInput : MonoBehaviour
 {
 
@@ -16,6 +17,7 @@ public class TextInput : MonoBehaviour
         inputField.onEndEdit.AddListener(AcceptStringInput);
     }
 
+    //Checks to see if the command is correct
     void AcceptStringInput(string userInput)
     {
 

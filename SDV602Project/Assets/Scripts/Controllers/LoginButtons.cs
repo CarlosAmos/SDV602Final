@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Used for displaying correct login buttons on menu page
 public class LoginButtons : MonoBehaviour
 {
     public GameObject btnOnlineLogin;
@@ -18,6 +19,7 @@ public class LoginButtons : MonoBehaviour
     public string Login = "Login";
     public string Logout = "Logout";
 
+    //Hides and shows buttons on startup
     void Start()
     {
         btnOfflineLogin.SetActive(false);
@@ -28,6 +30,7 @@ public class LoginButtons : MonoBehaviour
         btnStartGame.SetActive(true);
     }
 
+    //Hides and shows buttons if user presses login button or if it says logout
     public void ShowLoginButtons()
     {
         string btnText = Loginbtn.text;
@@ -51,6 +54,7 @@ public class LoginButtons : MonoBehaviour
 
     }
 
+    //Used to check if the player has an existing game, if they do it will show the load button
     public void CheckCharacter()
     {
         switch(GameModel.CheckLocation(GameModel.currentPlayer.ID))
@@ -72,6 +76,7 @@ public class LoginButtons : MonoBehaviour
         CheckCharacter();
     }
 
+    //If the user presses cancel button in menu
     public void CancelLogin()
     {
         btnLogin.SetActive(true);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//used for controlling the scenes in the game
 public class sceneManager : MonoBehaviour
 {
     //This is used to change screens to the menu screen

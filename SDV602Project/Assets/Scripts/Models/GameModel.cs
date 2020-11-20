@@ -10,7 +10,7 @@ using System.IO;
 using System.Text;
 using SQLite4Unity3d;
 
-// Is this a factory?
+
 
 public static class GameModel
 {
@@ -38,6 +38,7 @@ public static class GameModel
     // Here enum is being used to determine 
     // Login Reg statuses.
 
+    //Region for the code of the offline login system
     #region Offline
     public enum PasswdMode{
         NeedName,
@@ -46,12 +47,12 @@ public static class GameModel
         AllBad
     }
 
+    //used to check the password of an offline account
     public static PasswdMode CheckPassword(string pUsername, string pPassword)
     {
         PasswdMode result = GameModel.PasswdMode.AllBad;
 
         Player aPlayer = ds.getPlayer(pUsername);
-        //Changes Here
 
         if( aPlayer != null)
         {
@@ -73,6 +74,7 @@ public static class GameModel
         return result;
     }
 
+    //Used to register player
     public static void RegisterPlayer(string pUsername, string pPassword)
     {
        
@@ -85,7 +87,7 @@ public static class GameModel
         Exists,
         AllBad
     }
-
+    //Used to check the player
     public static PlayerMde CheckPlayer(string pUsername)
     {
         PlayerMde result = GameModel.PlayerMde.AllBad;
@@ -102,11 +104,13 @@ public static class GameModel
         return result;
     }
 
+    //Used to create a new character when the user starts a new game
     public static void newLocation(int pPlayerID, string pLocation, int pScore)
     {
         GameModel.currentCharacter = GameModel.ds.storeNewCharacter(pPlayerID, pLocation, pScore);
     }
 
+    //used to update the location of the player when they enter a new room
     public static void updateLocation(int pPlayerID, string pLocation, int pScore)
     {
         GameModel.currentCharacter = GameModel.ds.updateCharacter(pPlayerID, pLocation, pScore);
@@ -118,7 +122,7 @@ public static class GameModel
         Exists,
         AllBad
     }
-
+    //Used to check the location of the player (For Loading game)
     public static CharacterMde CheckLocation(int pPlayerID)
     {
         CharacterMde result = GameModel.CharacterMde.AllBad;

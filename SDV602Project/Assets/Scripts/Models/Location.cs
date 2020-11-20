@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SQLite4Unity3d;
 
+//Not using
 public class Location 
 {
     /*private string name;

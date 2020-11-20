@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Used for the wake command
 [CreateAssetMenu(menuName = "OneManStanding/InputActions/Wake")]
 public class Wake : InputAction
 {

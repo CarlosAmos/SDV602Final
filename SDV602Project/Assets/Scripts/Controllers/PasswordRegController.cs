@@ -15,7 +15,9 @@ public class PasswordRegController : MonoBehaviour
     public string playerName;
     private int userCount = 0;
 
+    //used for offline login
     #region OfflineLogin
+    //Used to check the password
     public void CheckPassword()
     {
 
@@ -33,7 +35,7 @@ public class PasswordRegController : MonoBehaviour
         }
         
     }
-
+    //used to register the player
     public void RegisterPlayer()
     {
         GameModel.RegisterPlayer(Playername.text, Password.text);
@@ -80,8 +82,10 @@ public class PasswordRegController : MonoBehaviour
 
     #endregion
 
+    //Used for online login
     #region OnlineLogin
 
+    //used to register new player
     #region Register
     PlayerManager playerManager = new PlayerManager();
 
@@ -108,6 +112,7 @@ public class PasswordRegController : MonoBehaviour
 
     #endregion
 
+    //used to login player and call register if they dont exist
     #region Login
 
 

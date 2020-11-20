@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
+//Not in use
 public class NetworkService : MonoBehaviour
 {
     JSONDropService jsDrop = new JSONDropService { Token = "b17dceb4-636b-4c07-ad47-1139b1c87a91" };

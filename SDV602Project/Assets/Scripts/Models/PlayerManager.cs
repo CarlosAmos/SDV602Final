@@ -5,8 +5,10 @@ using System.Linq;
 
 public class PlayerManager
 {
+    //JSON token for send JSNdrop to the network
     JSONDropService jsDrop = new JSONDropService { Token = "b17dceb4-636b-4c07-ad47-1139b1c87a91" };
 
+    //Used for connecting to the database
     private DataService ds = new DataService("OneManStanding.db");
 
     public bool LoggedIn = false;
@@ -27,7 +29,7 @@ public class PlayerManager
             typeof(Player),
         });
     }
-
+    //Used for handling the online login 
     #region OnlineLogin
 
 

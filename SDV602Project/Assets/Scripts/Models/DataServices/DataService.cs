@@ -96,7 +96,7 @@ public class DataService  {
 
         }
     }
-    // Player
+    //used to register a new player
     public Player storeNewPlayer(string pUsername, string pPassword)
     {
         Player player = new Player
@@ -108,6 +108,7 @@ public class DataService  {
         return player;
     }
 
+    //Used to get a existing player from database
     public Player getPlayer(string pPlayerName)
     {
         return _connection.Table<Player>().Where(x => x.Username == pPlayerName).FirstOrDefault();

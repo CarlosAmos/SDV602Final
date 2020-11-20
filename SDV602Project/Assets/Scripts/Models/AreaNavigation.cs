@@ -21,7 +21,7 @@ public class AreaNavigation : MonoBehaviour
         DisplayAreaName.text = currentArea.areaName;
     }
 
-
+    //This would get all the exits in the room and display them in the display text
     public void UnpackExitsInArea()
     {
         for (int i = 0; i < currentArea.exits.Length; i++)
@@ -31,19 +31,19 @@ public class AreaNavigation : MonoBehaviour
         }
     }
 
+    //used when the user enters a command into textbox
     public void AttemptToChangeArea(string directionNoun)
     {
-        
-
-
         if(exitDictionary.ContainsKey(directionNoun))
         {
+            // Used if the user uses the command Wake
             if(directionNoun == "yourself")
             {
                 currentArea = exitDictionary[directionNoun];
                 controller.LogStringWithReturn("You wake" + " " + directionNoun);
                 controller.DisplayAreaText();
             }
+            // Used if the user uses the command Go
             else
             {
                 currentArea = exitDictionary[directionNoun];
@@ -51,12 +51,14 @@ public class AreaNavigation : MonoBehaviour
                 controller.DisplayAreaText();
             }
         }
+        //This is used for when the command is not recognised
         else
         {
             controller.LogStringWithReturn("I don't think I can do that");
         }
     }
 
+    //This would clear the stored exits of the previous room
     public void ClearExits()
     {
         exitDictionary.Clear();

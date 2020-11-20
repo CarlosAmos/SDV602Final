@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+
+//used for handeling gyro from phone
 public class GyroManager : MonoBehaviour
 {
     
@@ -30,6 +32,7 @@ public class GyroManager : MonoBehaviour
     private Quaternion rotation;
     private bool gyroActive;
 
+    //used for turning on gyro
     public void EnableGyro()
     {
         if (gyroActive)
@@ -43,7 +46,7 @@ public class GyroManager : MonoBehaviour
         }
 
     }
-
+    //Used for showing the direction of sphere in the way the phone is facing
     private void Update()
     {
         if(gyroActive)

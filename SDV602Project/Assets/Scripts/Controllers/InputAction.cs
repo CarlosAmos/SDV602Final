@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//used for the input commands
 public abstract class InputAction : ScriptableObject
 {
     public string keyWord;

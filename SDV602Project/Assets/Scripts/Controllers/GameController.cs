@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
     }
     #endregion
 
-    //Loadgame code
+    //Loadgame code used for loading existing game
     #region Loadgame
     public Areas currentArea;
 
@@ -118,10 +118,12 @@ public class GameController : MonoBehaviour
 
     #endregion
 
+    //Gameover code trigger to check when to start game over
     #region GameOver
 
     #endregion
 
+    //Used for the trigger and taking user to puzzle/minigame
     #region ToPuzzle
    
 
@@ -193,6 +195,7 @@ public class GameController : MonoBehaviour
     }
     #endregion
 
+    //used to save the location of the player when the exit
     #region SaveGame
     public string befscore;
     public int aftscore;

@@ -4,6 +4,7 @@ using SQLite4Unity3d;
 
 public class Character 
 {
+    //Used for the data of the ingame character
     private int playerID;
     private string location;
     private int score;

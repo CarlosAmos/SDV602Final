@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Used for the use command
 [CreateAssetMenu(menuName = "OneManStanding/InputActions/Use")]
 public class Use : InputAction
 {

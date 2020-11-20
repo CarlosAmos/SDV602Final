@@ -4,7 +4,7 @@ using SQLite4Unity3d;
 
 public class Player 
 {
-
+    //Used to get and store data on the current player logged in
     private string username;
     private string password;
     private string location;

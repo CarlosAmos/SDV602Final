@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//used for the Go command
 [CreateAssetMenu(menuName = "OneManStanding/InputActions/Go")]
 public class Go : InputAction
 {

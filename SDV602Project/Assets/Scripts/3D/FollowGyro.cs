@@ -12,6 +12,7 @@ public class FollowGyro : MonoBehaviour
         GyroManager.Instance.EnableGyro();
     }
 
+    //Get position of gyro in phone and translate it to the sphere
     private void Update()
     {
         transform.localRotation = GyroManager.Instance.GetGyroRotation() * baseRotation;

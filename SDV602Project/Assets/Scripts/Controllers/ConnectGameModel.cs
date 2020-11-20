@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//No in use
 public class ConnectGameModel : MonoBehaviour
 {
     
